@@ -17,7 +17,7 @@
 \newcounter{multiplechoice}
 \renewenvironment{problem}[1]{\setcounter{multiplechoice}{0}\textcolor{gray!50!white}{\textbf{\scalebox{0.7}{PROBLEM} #1}} \\[0.5ex]}{}
 
-\newcommand{\choice}[1]{\stepcounter{multiplechoice}\textcolor{gray}{\fbox{\scalebox{0.8}{\makebox[\widthof{\textbf{W}}]{\textbf{\Alph{multiplechoice}}}}}} #1 \\[0.25ex]}
+\newcommand{\choice}[1]{\stepcounter{multiplechoice}\textcolor{gray!50!white}{\fbox{\scalebox{0.8}{\makebox[\widthof{\textbf{W}}]{\textbf{\Alph{multiplechoice}}}}}} #1 \\[0.25ex]}
 
 % #1 is pre, #2 is post, and #3-#4 is the 95% CI
 \newcommand{\prepost}[4]{\null\hfill\makebox[0in][r]{\textcolor{red!58!white}{{Pretest} #1\%}\textcolor{black!58!white}{\ldots}\textcolor{blue!58!white}{Posttest #2\%}}\vspace{-18pt}}
@@ -299,16 +299,8 @@
   
 \end{frame}
 
-% This talk presents data on how the CKA can be used to measure
-% learning gains (e.g., in August 2016, a student submitted on average
-% 35 correct answers during the pretest while at the end of the
-% course, a student submitted on average 47 correct answers)
-
 % and how certain CKA items are highly correlated with success on
-% traditional in-class exams.  The fact that the CKA is openly
-% licensed and served via the open-source Ximera platform makes it
-% easy for other schools to adopt the CKA.
-
+% traditional in-class exams.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Joint project
@@ -316,9 +308,11 @@
   \frametitle{Joint work}
   \Large
 
-  This is a joint project with Bart Snapp \\
-  \quad and the ``Math Education Forum'' \\
-  which considers calculus instruction at Ohio State.
+  This is a report on an ongoing joint project \\
+  \quad with Bart Snapp \textcolor{gray}{and} \\
+  \quad with the ``Math Education Forum'' \\
+  \quad\quad which considers calculus instruction \\
+  \quad\quad\quad at Ohio State.
   
 \end{frame}
 
@@ -359,8 +353,24 @@
   \vfill
 
   Delivered initially via optical mark recognition, \\
-  \quad but now online via the \textbf{\textsf{XIMERA}} platform.
+  \quad but now online via the \textbf{\textsf{XIMERA}} platform, \\
+  \quad making it easy to connect \textcolor{gray}{via LTI} with a gradebook.
   
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \large
+  
+  We administered the CKA to \\
+  \quad students in \textcolor{gray}{(MATH 1151)} Calculus 1 \\
+  \quad beginning in Autumn 2015, \\
+  \quad\quad and continuing each semester since then.
+
+  \vfill
+  
+  In Autumn 2017, \\
+  \quad $N = 2240$ students took the exam.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -369,11 +379,11 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{The nightmare of college calculus instructors}
+  \frametitle{The nightmare of calculus instructors}
   \large
   
   Among our students, $>40\%$ have taken an  AP~Calculus course; \\
-  \quad and most of the others have taken a course called calculus.
+  \quad and most of the others have taken a course titled ``calculus.''
 
   \vfill
   
@@ -388,12 +398,12 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Pretest versus posttest}
+  \frametitle{Posttest $>$ Pretest}
   \large
   
   \begin{tabular}{@{}l@{ }l@{ }l}
-  On the &pretest, &$\approx$ 15.1 correct responses. \\
-  On the &posttest, &$\approx$ 19.3 correct responses.
+  On the &CKA Pretest, &$\approx$ 15.1 correct responses. \\
+  On the &CKA Posttest, &$\approx$ 19.3 correct responses.
   \end{tabular}
 
   \vfill
@@ -437,7 +447,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Internal Consistency}
+  \frametitle{The CKA is internally consistent}
   \large
   
   For the smaller set of problems used Autumn~2017, \\
@@ -454,7 +464,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
   \frametitle{Aligned with traditional exams}
-
+  
   % This is the score as the mean of correct responses
   
   Posttest score and Final Exam are linearly correlated \textcolor{gray}{($p < 0.001$)} \\
@@ -471,6 +481,42 @@
   \textbf{But be warned} that Exam 1 and the Final Exam are more correlated \\
   \quad \textcolor{gray}{with Pearson correlation coefficient $\approx$ 0.665.}
   
+\end{frame}
+
+\begin{frame}
+  \frametitle{Aligned with ``enjoyment''}
+  \large
+  
+  Those who express pre-course an enjoyment of mathematics \\
+  \quad also score higher on the CKA pretest; \\
+  \textcolor{gray}{\quad\quad \textbf{39.6\% vs 45.3\%;} $p<0.001$; \\
+  \quad\quad\quad 95\% CI [3.7\%, 7.5\%].}
+
+  \vspace{1ex}
+  
+  Those who express post-course an enjoyment of mathematics \\
+  \quad also score higher on the CKA posttest; \\
+  \textcolor{gray}{\quad\quad \textbf{43.1\% vs 46.4\%;} $p<0.001$; \\
+  \quad\quad\quad 95\% CI [1.1\%, 5.6\%].}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Aligned with ``confidence''}
+  \large
+  
+    Those who express pre-course confidence in ability \\
+    \quad also score higher on the CKA pretest; \\
+    \textcolor{gray}{\quad\quad \textbf{39.4\% vs 45.4\%;} $p<0.001$; \\
+    \quad\quad\quad 95\% CI [4.2\%, 8.0\%].}
+
+      \vspace{1ex}
+
+  Those who express post-course confidence in ability \\
+  \quad also score higher on the CKA posttest; \\
+  \textcolor{gray}{\quad\quad\textbf{41.9\% vs 47.0\%;} $p<0.001$; \\
+    \quad\quad\quad 95\% CI [2.9\%, 7.2\%].}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -505,7 +551,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Some big gains}
+  \frametitle{Some big gains on ``traditional'' questions}
   \large
   
   The big gains on q144 \textcolor{gray}{(Suppose $f''(x) = f'(x) + f(x)$\ldots)} \\
@@ -513,6 +559,13 @@
   suggest that we are teaching ``calculus'' \\
   \quad and our students are learning ``calculus.''
 
+  \vfill
+
+  These questions can be answered quickly, \\
+  \quad but they arguably aren't ``conceptual'' \\
+  \quad since the terminology \\
+  \quad\quad stymies a learner who hasn't seen such terminology.
+ 
 \end{frame}
 
 
@@ -564,7 +617,7 @@ Suppose the point $(2,3)$ is on the graph of $f$.\\[1.5ex]
 \end{frame}
 
 \begin{frame}
-  \frametitle{Forgetfulness}
+  \frametitle{Forgetfulness and the transience of memory}
   \large
 
   Problems p13 \textcolor{gray}{(Four equally spaced numbers\ldots)} \\
@@ -574,8 +627,11 @@ Suppose the point $(2,3)$ is on the graph of $f$.\\[1.5ex]
   \vfill
   
   We oughtn't be surprised our students forget something\\
-  \quad by the end of calculus---\\
-  hence efforts like ``stretch calculus.''
+  \quad by the end of calculus.
+
+  \vfill
+
+  This buoys the need for efforts like ``stretch calculus.''
 
 \end{frame}
 
@@ -603,9 +659,16 @@ Suppose the point $(2,3)$ is on the graph of $f$.\\[1.5ex]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-  The CKA is a tool in the fight against \textbf{data balkanization}.
+  \frametitle{The Long-Term Goal of the CKA}
+  \large
 
-  An advantage publishers have is a common data warehouse.
+  The CKA is a powerful tool \\
+  \quad in the fight against \textbf{data balkanization} in academia. \\
+  \quad\quad An advantage a commercial publisher has \\
+  \quad\quad\quad is that their data sits in a single data warehouse. \\
+  \quad\quad By storing CKA problems in a common place \\
+  \quad\quad\quad and in a common format, \\
+  \quad\quad we are building a competing, open warehouse.
 
 \end{frame}
 
@@ -619,6 +682,9 @@ Suppose the point $(2,3)$ is on the graph of $f$.\\[1.5ex]
     \scalebox{1.5}{\textbf{Thank You}}
    \end{center}
    \vfill
+   \begin{center}
+     \url{https://github.com/mooculus/concepts}
+   \end{center}
    \vfill
    \ccbysa\hfill\footnotesize\scalebox{0.75}{\textcolor{ccgray}{Licensed for reuse under a Creative Commons BY-NC-SA License}}
    \null
