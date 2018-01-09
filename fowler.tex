@@ -14,7 +14,15 @@
 
 \newcommand{\hsc}[1]{{\footnotesize\MakeUppercase{#1}}}
 
-%\includeonlyframes{goal}
+\newcounter{multiplechoice}
+\renewenvironment{problem}[1]{\setcounter{multiplechoice}{0}\textcolor{gray!50!white}{\textbf{\scalebox{0.7}{PROBLEM} #1}} \\[0.5ex]}{}
+
+\newcommand{\choice}[1]{\stepcounter{multiplechoice}\textcolor{gray}{\fbox{\scalebox{0.8}{\makebox[\widthof{\textbf{W}}]{\textbf{\Alph{multiplechoice}}}}}} #1 \\[0.25ex]}
+
+% #1 is pre, #2 is post, and #3-#4 is the 95% CI
+\newcommand{\prepost}[4]{\null\hfill\makebox[0in][r]{\textcolor{red!58!white}{{Pretest} #1\%}\textcolor{black!58!white}{\ldots}\textcolor{blue!58!white}{Posttest #2\%}}\vspace{-18pt}}
+
+
 \usepackage{rotating}
 
 \usetikzlibrary{positioning, shapes}
@@ -291,6 +299,316 @@
   
 \end{frame}
 
+% This talk presents data on how the CKA can be used to measure
+% learning gains (e.g., in August 2016, a student submitted on average
+% 35 correct answers during the pretest while at the end of the
+% course, a student submitted on average 47 correct answers)
+
+% and how certain CKA items are highly correlated with success on
+% traditional in-class exams.  The fact that the CKA is openly
+% licensed and served via the open-source Ximera platform makes it
+% easy for other schools to adopt the CKA.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Joint project
+\begin{frame}
+  \frametitle{Joint work}
+  \Large
+
+  This is a joint project with Bart Snapp \\
+  \quad and the ``Math Education Forum'' \\
+  which considers calculus instruction at Ohio State.
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Desiderata
+\begin{frame}
+  \Large
+  \vfill
+  
+  \textbf{Are our calculus students learning?} \\
+  \textbf{And what are they learning?}
+
+  \vfill
+  
+  To begin to answer these questions, \\
+  \quad we administered pretests and posttests \\
+  \quad in our calculus courses.
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The CKA
+\begin{frame}
+  \large
+  
+  The \textbf{Calculus Knowledge Assessment} is \\
+  \quad a bank of \textcolor{gray}{currently 221} multiple-choice items.
+
+  \vfill
+  
+  Problems written by Ohio State faculty\\
+  \quad are openly-licensed \textcolor{gray}{under CC--BY--SA.}
+
+  \vfill
+
+  Source at \url{https://github.com/mooculus/concepts}
+  
+  \vfill
+
+  Delivered initially via optical mark recognition, \\
+  \quad but now online via the \textbf{\textsf{XIMERA}} platform.
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \scaletowidth{\textwidth}{\textbf{Are our calculus students learning?}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The nightmare of college calculus instructors}
+  \large
+  
+  Among our students, $>40\%$ have taken an  AP~Calculus course; \\
+  \quad and most of the others have taken a course called calculus.
+
+  \vfill
+  
+  Students with AP~experience score better on our exams \\
+  \quad\textcolor{gray}{(77.6\% vs 71.0\%; $p<0.001$; 95\% CI [+4.2\%,+9.0\%])} \\
+  so maybe students would pass \textit{even if we did nothing.}
+
+  \vfill
+  
+  \textbf{Are we adding value?}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pretest versus posttest}
+  \large
+  
+  \begin{tabular}{@{}l@{ }l@{ }l}
+  On the &pretest, &$\approx$ 15.1 correct responses. \\
+  On the &posttest, &$\approx$ 19.3 correct responses.
+  \end{tabular}
+
+  \vfill
+
+  This is significant \textcolor{gray}{$(p < 0.001)$} with \textcolor{gray}{95\% CI of} \\
+  \quad 2.8--5.5 more correct responses on the posttest.
+
+  \vfill
+
+  \textbf{We are adding value.}
+  
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Students become more fluent}
+
+  \large
+
+  It takes $\approx$ 48 seconds after displaying a problem \\
+  \quad for a student to respond with a correct answer.
+
+  \vfill
+  
+  \begin{tabular}{@{}l@{ }l@{ }l}
+  On the &pretest, &$\approx$ 54.9 seconds/correct response. \\
+  On the &posttest, &$\approx$ 46.6 seconds/correct response.
+  \end{tabular}
+
+  \vfill
+
+  This is significant \textcolor{gray}{$(p < 0.001)$} with \textcolor{gray}{95\% CI of} \\
+  \quad an improvement of 6.0--10.6 seconds/correct response.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \scaletowidth{\textwidth}{\textbf{What are we teaching?}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Internal Consistency}
+  \large
+  
+  For the smaller set of problems used Autumn~2017, \\
+  \quad Cronbach's $\alpha$ lies in \textcolor{gray}{95\% CI}
+  $[0.75,0.78]$.
+
+  \vfill
+  
+  What is ``dimension'' of the space of calculus problems? \\\quad \textcolor{gray}{This has
+  implications for Item Response Theory.}
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Aligned with traditional exams}
+
+  % This is the score as the mean of correct responses
+  
+  Posttest score and Final Exam are linearly correlated \textcolor{gray}{($p < 0.001$)} \\
+  \quad \textcolor{gray}{with Pearson correlation coefficient $\approx$ 0.361.} \\
+  \quad meaning a medium effect size.
+
+  \vfill
+  
+  Pre-test score and Exam 1 are linearly correlated \textcolor{gray}{($p < 0.001$)} \\
+  \quad \textcolor{gray}{with Pearson correlation coefficient $\approx$ 0.315.}
+
+  \vfill
+  
+  \textbf{But be warned} that Exam 1 and the Final Exam are more correlated \\
+  \quad \textcolor{gray}{with Pearson correlation coefficient $\approx$ 0.665.}
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \prepost{13.0}{40.2}{15.8}{38.5}
+
+\begin{problem}{q144}
+  Suppose $f''(x) = f'(x) + f(x)$.\\[1ex]
+
+  If $f'(1) = 0$ and $f(1) = 2$, what is true about $f$?\\[1.5ex]
+  
+  \choice{$f$ has a local minimum at the point $1$}
+  \choice{$f$ has a local maximum at the point $1$}
+  \choice{$f$ has an inflection point at $1$}
+\end{problem}
+
+\end{frame}
+
+\begin{frame}
+
+  \prepost{15.8}{34.7}{7.5}{30.4}
+  
+\begin{problem}{q171}
+  When $n$ is a large integer, what can be said about \[\int_0^{n \pi} \sin x \, dx?\]
+  
+    \choice{It is large.}
+    \choice{It is close to zero but not exactly zero.}
+    \choice{It is exactly zero.}
+    \choice{It is very negative.}
+\end{problem}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Some big gains}
+  \large
+  
+  The big gains on q144 \textcolor{gray}{(Suppose $f''(x) = f'(x) + f(x)$\ldots)} \\
+  \quad and on q171 \textcolor{gray}{(\ldots$\int_0^{n \pi} \sin x \, dx$\ldots)} \\
+  suggest that we are teaching ``calculus'' \\
+  \quad and our students are learning ``calculus.''
+
+\end{frame}
+
+
+\begin{frame}
+  \prepost{35.3}{38.1}{-10.1}{15.7}
+  
+  \begin{problem}{p13}
+    Four equally spaced numbers are shown below on a number line.
+    \begin{center}
+    \begin{tikzpicture}[x=0.19\textwidth]
+      \draw[-{>[scale=1.75]}] (-0.05\textwidth,0) -- (0.8\textwidth,0);
+      \foreach \x in {0,...,4} {%
+        \draw (\x,-.1) -- (\x,.1);
+        \node[anchor=north,yshift=-2pt] at (\x,0) {$\x$};
+      }
+      \draw (0.5,0) node [circle,fill,inner sep=1pt,label=above:$x$](e){};
+      \draw (1.5,0) node [circle,fill,inner sep=1pt,label=above:$y$](e){};
+      \draw (2.5,0) node [circle,fill,inner sep=1pt,label=above:$z$](e){};
+      \draw (3.5,0) node [circle,fill,inner sep=1pt,label=above:$w$](e){};
+    \end{tikzpicture}
+  \end{center}
+
+  Let $f(t) = \ln t$ and consider $f(x)$ and $f(y)$ and $f(z)$ and
+  $f(w)$.  Among the pairs listed below, which pair of numbers is
+  farthest apart? \\[1.5ex]
+  
+    \choice{The pair $f(x)$ and $f(y)$.}
+    \choice{The pair $f(y)$ and $f(z)$.}
+    \choice{The pair $f(z)$ and $f(w)$.}
+    \choice{These pairs are all equally far apart.}
+\end{problem}
+\end{frame}
+
+
+\begin{frame}
+
+  \prepost{46.1}{31.3}{-28.3}{-1.2}
+  
+\begin{problem}{q17}
+	Let $f$ and $g$ be two functions satisfying the relationship $f(x) = g(4x)$.
+
+Suppose the point $(2,3)$ is on the graph of $f$.\\[1.5ex]
+
+		\choice{The point $(\frac{1}{2},3)$ is on the graph of $g$}
+		\choice{The point $(8, 3)$ is on the graph of $g$}
+		\choice{The point $(8, 12)$ is on the graph of $g$}
+		\choice{The point $(\frac{1}{2}, 12)$ is on the graph of $g$}
+\end{problem}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Forgetfulness}
+  \large
+
+  Problems p13 \textcolor{gray}{(Four equally spaced numbers\ldots)} \\
+  \quad and q17 \textcolor{gray}{(\ldots $f(x) = g(4x)$ \ldots)} \\
+  are essentially precalculus questions.
+
+  \vfill
+  
+  We oughtn't be surprised our students forget something\\
+  \quad by the end of calculus---\\
+  hence efforts like ``stretch calculus.''
+
+\end{frame}
+
+
+\begin{frame}[nofills]
+
+  \prepost{24.2}{12.7}{-22.2}{0.7}
+  
+\begin{problem}{q51}
+  Suppose $A$ and $a$ differ by at most $2$ and \\
+  \quad suppose $B$ and $b$ differ by at most $1$.
+
+  In symbols, this means that $|A - a| < 2$ and $|B - b| < 1$.
+  
+  By how much could $A/B$ and $a/b$ differ?\vspace{1.5ex}
+
+    \choice{By no more than $1$, meaning $|A/B - a/b| < 1$}
+    \choice{By no more than $2$, meaning $|A/B - a/b| < 2$}
+    \choice{By no more than a factor of $2$, meaning $\displaystyle\left| \frac{A/B}{a/b} \right| < 2$}
+    \choice{By no more than a factor of $1/2$, meaning $\displaystyle\left| \frac{A/B}{a/b} \right| < \frac{1}{2}$}
+    \choice{By any amount}
+\end{problem}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  The CKA is a tool in the fight against \textbf{data balkanization}.
+
+  An advantage publishers have is a common data warehouse.
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % THANK YOU
  \clearbackgroundpicture
@@ -304,7 +622,6 @@
    \vfill
    \ccbysa\hfill\footnotesize\scalebox{0.75}{\textcolor{ccgray}{Licensed for reuse under a Creative Commons BY-NC-SA License}}
    \null
-   %\vspace{12pt}
    \null
  \end{frame}
 
